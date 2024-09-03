@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <title>5th exp</title>
+
+    <style>
+      #recovery {
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div
+      class="container border border-dark border-3 rounded-3 mt-3"
+      style="width: 600px"
+    >
+      
+        </div>
+        <div class="col-6 d-flex flex-column mt-3 mb-3">
+          <h2>Welcome</h2>
+          <h4>Enter to Sign In</h4>
+          <label for="inputUsername">Enter Username:</label>
+          <input type="text" id="inputUsername" />
+          <label for="inputPassword">Enter Passward:</label>
+          <input type="text" id="inputPassword" />
+          <div class="div1 d-flex justify-content-between align-items-center">
+            <div class="checkb d-flex align-items-center">
+              <input
+                type="checkbox"
+                class="me-1 align-self-center"
+                name=""
+                id="check"
+              />
+              <label for="check">Remember Me</label>
+            </div>
+            <div class="text-end text-black-50 my-2">
+              <small id="recovery">Recovery Password</small>
+            </div>
+          </div>
+          <div class="btn btn-primary mt-1" id="button">Sign In</div>
+          <div
+            class="d-flex flex-column justify-content-center align-items-center"
+          >
+            <p class="fs-5"><small>or Sign Up Using</small></p>
+            <img
+              src="facebool google twitter logo.jpg"
+              alt=""
+              width="100px"
+              height="30px"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document
+        .getElementById("recovery")
+        .addEventListener("click", function () {
+          prompt("Enter New Password:");
+        });
+
+      document.getElementById("button").addEventListener("click", function () {
+        const username = document.getElementById("inputUsername").value;
+        const password = document.getElementById("inputPassword").value;
+        if (!username || !password) {
+          alert("Please fill your credentials");
+        }
+      });
+    </script>
+  </body>
+</html>
